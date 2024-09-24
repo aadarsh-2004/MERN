@@ -11,7 +11,7 @@ import ToggleSwitch from './ToggleSwitch';
 import TodoList from './TodoList';
 
 const App = () => {
-  const [selectedColor, setSelectedColor] = useState('#000000');
+  const [selectedColor, setSelectedColor] = useState('blue');
   const [inputText, setInputText] = useState('');
   const [isToggled, setIsToggled] = useState(false);
   const initialLikeCount = 0;
@@ -36,8 +36,8 @@ const App = () => {
     <div style={containerStyle}>
 
 
-      <Greeting name="Vansh" />
-      <ProfileCard name="Vansh Bhatnagar" age={19} location="Udaipur" />
+      <Greeting name="Aadarsh Soni" />
+      <ProfileCard name="Aadarsh Soni" age={20} location="Udaipur" />
       <StatusMessage status="success" />
       <StatusMessage status="error" />
       <Counter />
