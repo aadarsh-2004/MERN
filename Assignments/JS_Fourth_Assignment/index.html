@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated DOM Manipulation</title>
+</head>
+<body>
+    <h3>Create and Append Div</h3>
+    <button onclick="createAndAppendDiv()">Create Div</button>
+
+    <h3>Modify Paragraph Background Color</h3>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <button onclick="changeParagraphColor()">Change Color</button>
+
+    <h3>Form Input Validation</h3>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+        <p id="errorMessage" style="color:red; display:none;">Please enter a name.</p>
+    </form>
+
+    <h3>Dynamic List Creation</h3>
+    <input type="text" id="listItem" placeholder="Enter item">
+    <button onclick="addItem()">Add</button>
+    <ul id="itemList"></ul>
+
+    <h3>Toggle Image Visibility</h3>
+    <img id="myImage" src="https://via.placeholder.com/150" alt="Sample Image">
+    <button onclick="toggleImage()">Toggle Image</button>
+
+    <script>
+        function createAndAppendDiv() {
+            const newDiv = document.createElement('div');
+            newDiv.id = 'uniqueDiv';
+            const text = document.createTextNode('This is a new div!');
+            newDiv.appendChild(text);
+            document.body.appendChild(newDiv);
+        }
+
+        function changeParagraphColor() {
+            const paragraphs = document.getElementsByTagName('p');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.backgroundColor = 'blue';
+            }
+        }
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            const nameInput = document.getElementById('name').value;
+            const errorMessage = document.getElementById('errorMessage');
+            if (nameInput === '') {
+                errorMessage.style.display = 'block';
+                event.preventDefault();
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+
+        function addItem() {
+            const input = document.getElementById('listItem').value;
+            const ul = document.getElementById('itemList');
+            if (input !== '') {
+                const li = document.createElement('li');
+                li.textContent = input;
+                ul.appendChild(li);
+                document.getElementById('listItem').value = '';
+            }
+        }
+
+        function toggleImage() {
+            const img = document.getElementById('myImage');
+            if (img.style.display === 'none') {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
