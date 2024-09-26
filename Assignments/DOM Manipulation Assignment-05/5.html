@@ -1,0 +1,71 @@
+<!--  Create a simple HTML form with input fields for a user's name and email. Write JavaScript to
+display a message below the form that says 'Thank you for submitting, [name]!' when the form is
+submitted. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Submission</title>
+    <style>
+        /* Basic styling for the form */
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 300px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Information Form</h2>
+    
+    <!-- Simple HTML Form with onsubmit attribute to handle the submission -->
+    <form id="userForm" onsubmit="displayMessage(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <!-- Placeholder for the thank you message -->
+    <div id="thankYouMessage" class="message"></div>
+
+    <script>
+        // Inline JavaScript function to handle form submission
+        function displayMessage(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            
+            // Get the value of the name input field
+            const name = document.getElementById("name").value;
+            
+            // Display the thank you message with the user's name
+            document.getElementById("thankYouMessage").textContent = `Thank you for submitting, ${name}!`;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--  Write a JavaScript program that creates a new <li> element with some text and adds it to an
+existing <ul> list when a button is clicked. -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add List Item Example</title>
+    <style>
+        /* Simple styling for clarity */
+        #myList {
+            margin-top: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+        #myList li {
+            padding: 8px;
+            background-color: #f2f2f2;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic List Example</h2>
+    
+    <!-- Button to add a new list item -->
+    <button onclick="addListItem()">Add New Item</button>
+    
+    <!-- Existing <ul> list -->
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // JavaScript function to add a new <li> element to the <ul> list
+        function addListItem() {
+            // Get the <ul> element by its ID
+            const ul = document.getElementById("myList");
+            
+            // Create a new <li> element
+            const li = document.createElement("li");
+            
+            // Create a new text node with the desired text
+            const text = document.createTextNode("New List Item");
+            
+            // Append the text node to the <li> element
+            li.appendChild(text);
+            
+            // Append the new <li> element to the <ul> list
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>

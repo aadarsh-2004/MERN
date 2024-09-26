@@ -1,0 +1,259 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    height: 10vh;
+    width: 100vw;
+    background-color:#f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+;
+.logo{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    margin-right: 40%;
+}
+.main-logo{
+    margin-left: 1%;
+}
+.logo button{
+    border: none;
+}
+.logo button:active{
+    background-color: rgb(127, 253, 255);
+}
+
+.logo button:hover{
+    background-color: rgba(127, 253, 255, 0.825);
+}
+.Art-School{
+    height: 100vh;
+    background-image: url("./assets/pexelsphoto1927507.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-body{
+    width: 100vw;
+}
+
+.content{
+    color: white;
+    height: 90%;
+    width: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7da2a9;
+    gap: 4%;
+}
+
+.heading{
+    width: 30%;
+    text-align: end;
+}
+.description{
+    width: 30%;
+    font-size: larger;
+}
+
+.progrms-content{
+    height: 120vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.grid-templet{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10%;
+}
+
+
+.grid img{
+    height: 4vw;
+}
+
+.books{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: #18181e;
+}
+
+.image{
+    background-image: url("./assets/books.png");
+    background-size: contain;
+    height: 70%;
+    width: 35%;
+}
+.books-content{
+    height: 70%;
+    width: 35%;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.books-content button{
+    height: 10%;
+    width: 30%;
+    margin-top: 10%;
+    background-color: #7da2a9 ;
+    border: none;
+    color: white;
+}
+.gallery{
+    text-align: center;
+    height: 220vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.gallery-heading{
+    width: 40%;
+    height: 10%;
+    margin: 4%;
+}
+
+.images{
+    height: 80%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3%;
+}
+
+.analytics{
+    margin-top: 5%;
+    height: 45vh;
+    background-color:#7da2a9 ;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.analytics-data h1{
+    font-size: 2vw;
+}
+.analytics-data p{
+    margin-top: 20%;
+    font-size: 1.2vw;
+}
+
+.gallery2{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.last2{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color: white;
+}
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7da2a9;
+}
+.two{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    background-color: #18181e;
+}
+
+.one-content h1{
+    font-size: 2.5rem;
+}
+
+.para{
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-weight:100;
+}
+
+.socail-media svg{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.two input{
+    height: 10%;
+}
+.footer{
+    height: 12vh;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop{
+    width: 100vw;
+}
+
+.laptop{
+    width: 80vw;
+}
+
+.tab{
+    width: 60vw;
+}
+
+.grid h1{
+    font-size: 2vw;
+}
+.grid p{
+    font-size: 1.3vw;
+}
+
+@media (max-width :500px){
+    .grid-templet{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .grid img{
+        height: 4vh;
+    }
+    .grid h1{
+        font-size: 3.5vw;
+    }
+
+    .grid p{
+        font-size: 3vw;
+    }
+}

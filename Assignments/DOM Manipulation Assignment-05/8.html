@@ -1,0 +1,46 @@
+<!--  Write a program that retrieves the value of an input field and displays it in another part of the
+document when a button is pressed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Input Value</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter your input below:</h2>
+
+    <!-- Input field -->
+    <input type="text" id="inputField" placeholder="Type something here">
+
+    <!-- Button to trigger the action -->
+    <button onclick="displayInput()">Display Input</button>
+
+    <!-- Div to display the result -->
+    <div id="result"></div>
+
+    <script>
+        // Function to retrieve input and display it
+        function displayInput() {
+            // Get the value from the input field
+            const inputValue = document.getElementById('inputField').value;
+
+            // Display the value inside the result div
+            document.getElementById('result').textContent = "You entered: " + inputValue;
+        }
+    </script>
+
+</body>
+</html>

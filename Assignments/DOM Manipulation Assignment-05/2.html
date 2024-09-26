@@ -1,0 +1,47 @@
+<!--  Write a program that changes the background color of a <div> element to blue when the mouse
+hovers over it. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to Change Background Color</title>
+    <style>
+        /* Initial styles for the <div> */
+        #myDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray; /* Default background color */
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        // JavaScript function to change the background color on mouse over
+        function changeBackgroundColorOnHover() {
+            const myDiv = document.getElementById("myDiv");
+
+            // Change color to blue when the mouse enters the div
+            myDiv.addEventListener("mouseover", function () {
+                myDiv.style.backgroundColor = "blue";
+            });
+
+            // Revert back to the original color when the mouse leaves the div
+            myDiv.addEventListener("mouseout", function () {
+                myDiv.style.backgroundColor = "lightgray";
+            });
+        }
+
+        // Initialize the function when the window loads
+        window.onload = changeBackgroundColorOnHover;
+    </script>
+</head>
+<body>
+    <!-- The <div> element -->
+    <div id="myDiv">Hover over me!</div>
+</body>
+</html>

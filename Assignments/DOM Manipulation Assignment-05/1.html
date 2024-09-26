@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">red this text</p>
+    <button id="btn">click to red this text</button>
+</body>
+<script>
+     const btn = document.getElementById('btn');
+     const para = document.getElementById('para');
+     function changeColor(){
+        para.style.color = 'red';
+     }
+     btn.onclick = function(){
+         changeColor();
+     }
+</script>
+</html>
